@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motortrade - Product Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #e3e1ff; font-family: system-ui; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #3a42a1; color: white; }
+    .nav-pill { display: flex; gap: 15px; }
+    .nav-pill a { color: white; text-decoration: none; padding: 8px 15px; border-radius: 25px; }
+    .nav-pill .sel { background-color: #8a92d1; }
+    .logo { font-weight: bold; font-size: 1.5rem; color: yellow; background-color: #2d338c; padding: 10px 20px; clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%); }
+    .product-img { max-width: 100%; border-radius: 15px; }
+    .btn-custom { background-color: #8a92d1; color: white; border-radius: 10px; padding: 10px 20px; }
+    .info-label { font-weight: 600; }
+    .card { background-color: white; padding: 20px; border-radius: 15px; }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="d-flex align-items-center gap-3">
+      <span>🔍</span>
+      <nav class="nav-pill">
+        <a href="#">HOME</a>
+        <a href="#" class="sel">STORE</a>
+        <a href="#">CONTACT</a>
+      </nav>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <span>🛒</span>
+      <div class="logo">Motortrade</div>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <!-- Image -->
+      <div class="col-md-5">
+        <div class="card text-center">
+          <img src="/mnt/data/e59874bf-3e84-41ce-b717-4047fe04590d.png" alt="Kawasaki Z1000" class="product-img">
+          <div class="mt-3">Kawasaki z1000</div>
+          <div class="d-flex justify-content-center gap-3 mt-2">
+            <button class="btn btn-custom">BUY</button>
+            <button class="btn btn-custom">CART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="col-md-7">
+        <h5>Description:</h5>
+        <p></p>
+        <div class="mb-2"><span class="info-label">Engine Type:</span> Liquid-cooled, In-Line Four</div>
+        <div class="mb-2"><span class="info-label">Fuel Capacity:</span> 17L</div>
+        <div class="mb-2"><span class="info-label">Max Power:</span> 142 HP @ 10,000 rpm</div>
+        <div class="mb-2"><span class="info-label">SRP:</span> Php 710,000</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

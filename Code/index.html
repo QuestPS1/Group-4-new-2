@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motortrade - Store (Page 1)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #A8BDE3;
+      --deep: #314C9F;
+      --accent: #F4E33B;
+      --sel: #C3C8D4;
+      --card-bg: #ffffff;
+    }
+
+    body{ background: var(--bg); font-family: system-ui; }
+
+    /* Topbar */
+    .topbar{ padding: 28px 40px; display:flex; justify-content:space-between; align-items:center; }
+    .nav-pill{ background:var(--deep); border-radius:40px; display:flex; gap:12px; padding:8px 18px; align-items:center; }
+    .nav-pill a{ color:white; padding:10px 22px; text-decoration:none; font-weight:600; border-radius:26px; }
+    .nav-pill .sel{ background:var(--sel); color:var(--deep); }
+    .logo-flag{ display:flex; align-items:center; gap:10px; }
+    .badge-flag{ background:var(--deep); color:var(--accent); padding:18px 30px; clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%); font-weight:700; font-size:1.4rem; }
+
+    /* Profile dropdown CSS (hover, no JS) */
+    .profile-menu { position: relative; cursor: pointer; margin-left: 12px; }
+    .profile-btn { padding: 6px 12px; background: white; border-radius: 12px; display: flex; align-items: center; font-weight: 600; color: var(--deep); }
+    .profile-links {
+      position: absolute; top:42px; right:0; background:white; border:1px solid #ccc; border-radius:12px;
+      display:none; flex-direction: column; min-width:240px; box-shadow:0 2px 6px rgba(0,0,0,0.2); z-index:100; padding:10px;
+    }
+
+    .profile-section h6 { margin-bottom:6px; font-weight:600; font-size:0.9rem; color: var(--deep); }
+    .profile-section form { display:flex; flex-direction:column; gap:6px; margin-bottom:6px; }
+    .profile-section input { padding:6px 8px; border-radius:6px; border:1px solid #ccc; }
+    .profile-section button { padding:6px 8px; border:none; background:var(--deep); color:white; border-radius:6px; cursor:pointer; }
+    .profile-links a { text-decoration:none; padding:6px 8px; color: var(--deep); font-weight:500; border-radius:6px; }
+    .profile-links a:hover { background: var(--sel); color: var(--deep); }
+
+    /* Show dropdown on hover */
+    .profile-menu:hover .profile-links { display:flex; }
+
+    /* Products */
+    .prod-img { height:180px; width:100%; object-fit:cover; border-radius:18px; background:#e0e0e0; }
+    .view-btn{ margin-top:12px; font-weight:700; padding:6px 16px; border-radius:10px; }
+    .add-btn{ background:var(--deep); color:white; padding:8px 12px; border:none; border-radius:8px; }
+    .buy-btn{ background:var(--accent); color:#111; padding:8px 12px; border:none; border-radius:8px; }
+
+    /* Card styling */
+    .product-card { background:white; border-radius:18px; padding:16px; box-shadow:0 2px 8px rgba(0,0,0,0.15); text-align:center; }
+    .product-card h5, .product-card p { margin-bottom:8px; }
+
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo-flag">
+    <div style="width:18px;height:18px;border-radius:50%;background:var(--deep)"></div>
+    <div class="badge-flag">
+      <img src="/mnt/data/fdb3df5d-8af1-4207-98d5-f072c7900d55.png" style="height:34px;">
+      Motortrade
+    </div>
+  </div>
+
+  <nav class="nav-pill d-flex align-items-center gap-3">
+    <a href="home.html">Home</a>
+    <a href="index.html" class="sel">STORE</a>
+    <a href="contact.html">CONTACT</a>
+
+    <!-- Profile Dropdown -->
+    <div class="profile-menu">
+      <div class="profile-btn">
+        <img src="profile.png" style="width:30px;height:30px;border-radius:50%;margin-right:6px;">
+        John Doe ▼
+      </div>
+      <div class="profile-links">
+
+        <!-- Edit Profile -->
+        <div class="profile-section">
+          <h6>Edit Profile</h6>
+          <form>
+            <input type="text" placeholder="Name" value="John Doe">
+            <input type="text" placeholder="Contact Number" value="09123456789">
+            <button type="submit">Save</button>
+          </form>
+        </div>
+
+        <!-- Account Settings -->
+        <div class="profile-section">
+          <h6>Account Settings</h6>
+          <form>
+            <input type="email" placeholder="Email" value="john@example.com">
+            <input type="password" placeholder="New Password">
+            <button type="submit">Save</button>
+          </form>
+        </div>
+
+        <a href="#" style="color:red;">Log Out</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="container py-4">
+  <div class="row g-4">
+
+    <!-- Product 1 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="images.png" class="prod-img">
+        <h5 class="fw-bold">Honda ADV 160</h5>
+        <p class="fw-bold">₱ 164,900</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="download.jpeg" class="prod-img">
+        <h5 class="fw-bold">Yamaha Aerox</h5>
+        <p class="fw-bold">₱ 125,900</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="hondanvi.jpeg" class="prod-img">
+        <h5 class="fw-bold">Honda Navi</h5>
+        <p class="fw-bold">₱ 56,900</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="kymco.jpeg" class="prod-img">
+        <h5 class="fw-bold">Kymco AK575 Premium</h5>
+        <p class="fw-bold">₱ 429,000</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="royal.jpg" class="prod-img">
+        <h5 class="fw-bold">Royal Enfield Classic 650</h5>
+        <p class="fw-bold">₱ 429,000</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="images.png" class="prod-img">
+        <h5 class="fw-bold">Honda Click 125i</h5>
+        <p class="fw-bold">₱ 81,900</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="images.png" class="prod-img">
+        <h5 class="fw-bold">Yamaha Sniper 155</h5>
+        <p class="fw-bold">₱ 145,900</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="images.png" class="prod-img">
+        <h5 class="fw-bold">Kawasaki Ninja ZX-25R</h5>
+        <p class="fw-bold">₱ 406,000</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="images.png" class="prod-img">
+        <h5 class="fw-bold">Yamaha YZF-R3</h5>
+        <p class="fw-bold">₱ 294,000</p>
+        <button class="view-btn btn btn-light">View Info</button>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+          <button class="add-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="d-flex justify-content-center mt-4">
+    <ul class="pagination">
+      <li class="page-item disabled"><a class="page-link">Previous</a></li>
+      <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+      <li class="page-item"><a class="page-link" href="2nd.html">2</a></li>
+      <li class="page-item"><a class="page-link" href="2nd.html">Next</a></li>
+    </ul>
+  </div>
+</main>
+
+</body>
+</html>

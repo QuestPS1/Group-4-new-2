@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motortrade - New Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #A8BDE3;
+      --deep: #314C9F;
+      --accent: #F4E33B;
+      --sel: #C3C8D4;
+      --card-bg: #ffffff;
+    }
+
+    body{ background: var(--bg); font-family: system-ui; }
+    .topbar{ padding: 28px 40px; display:flex; justify-content:space-between; align-items:center; }
+    .nav-pill{ background:var(--deep); border-radius:40px; display:flex; gap:12px; padding:8px 18px; }
+    .nav-pill a{ color:white; padding:10px 22px; text-decoration:none; font-weight:600; border-radius:26px; }
+    .nav-pill .sel{ background:var(--sel); color:var(--deep); }
+    .logo-flag{ display:flex; align-items:center; gap:10px; }
+    .badge-flag{ background:var(--deep); color:var(--accent); padding:18px 30px; clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%); font-weight:700; font-size:1.4rem; }
+  </style>
+</head>
+<body>
+
+<!-- SAME NAVBAR EXACT COPY -->
+<header class="topbar">
+  <div class="logo-flag">
+    <div style="width:18px;height:18px;border-radius:50%;background:var(--deep)"></div>
+    <div class="badge-flag">
+      <img src="/mnt/data/fdb3df5d-8af1-4207-98d5-f072c7900d55.png" style="height:34px;">
+      Motortrade
+    </div>
+  </div>
+
+  <nav class="nav-pill">
+    <a href="home.html">Home</a>
+    <a href="index.html">STORE</a>
+    <a href="#" class="sel">CONTACT</a>
+  </nav>
+</header>
+
+<!-- PAGE CONTENT -->
+<main class="container py-5">
+
+  <h1 class="fw-bold text-center" style="color:var(--deep);">Contact Us</h1>
+  <p class="text-center mb-4" style="color:#222;">
+    If you have questions, concerns, or inquiries, feel free to message us.
+  </p>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="p-4 rounded shadow" style="background: var(--card-bg); border-left: 8px solid var(--deep);">
+        
+        <!-- Name -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your full name">
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Email Address</label>
+          <input type="email" class="form-control" placeholder="Enter your email">
+        </div>
+
+        <!-- Contact Number -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Contact Number</label>
+          <input type="text" class="form-control" placeholder="09xxxxxxxxx">
+        </div>
+
+        <!-- Reason / Message -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Message</label>
+          <textarea class="form-control" rows="4" placeholder="Write your message here..."></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <div class="text-center">
+          <button class="btn" style="background:var(--deep);color:white;padding:10px 28px;border-radius:10px;">
+            Submit
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+
+</body>
+</html>
+
